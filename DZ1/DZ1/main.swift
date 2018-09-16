@@ -58,7 +58,7 @@ class ReissueInfo: Print_Protocol{
         print("Reissue Info \ndate: \(strDateYeag) \ninfo: \(info) \naddress: \(address)")
     }
 }
-var a = ReissueInfo(strDate: "10 октября 2018",information: "sdad", address: "asdaszxczxc")
+
 
 
 class Card: Print_Protocol {
@@ -78,8 +78,6 @@ class Card: Print_Protocol {
         print("Card \ncard id: \(id) \nbalance: \(balance) \ncurrency: \(currency?.rawValue ?? "incorrect currency")")
     }
 }
-var z = Card(id: 34, balance: 23.45, currency: "RUR", reissueInfo: a)
-z.printInfo()
 
 class ServerResponce: Print_Protocol {
     var cards: [Card]
@@ -93,7 +91,6 @@ class ServerResponce: Print_Protocol {
         print("Server Response \ncards: \(cards) \naccounts: \(accounts)")
     }
 }
-
 
 let ac1 = Account(id: 1, balance: 194.2, currency: "RUR", description: "First user", offer: "good")
 
