@@ -95,16 +95,16 @@ class ServerResponce: Print_Protocol {
 }
 
 
-let ac1 = Account(id: 34, balance: 34.5, currency: "RUR", description: "First user", offer: "Take it!")
+let ac1 = Account(id: 1, balance: 194.2, currency: "RUR", description: "First user", offer: "good")
 
-let ac2 = Account(id: 23, balance: 12.34, currency: "USD", description: "Second user")
+let ac2 = Account(id: 2, balance: 23.23, currency: "USD", description: "Second user")
 
 let accs = [ac1, ac2]
 
-let reissueInfo = ReissueInfo(strDate: "10 cенятбря 2018", information: "ReissueInfo")
-let card1 = Card(id: 56, balance:456.04, currency: "EUD", reissueInfo: reissueInfo)
+let reissueInfo = ReissueInfo(strDate: "16 cенятбря 2018", information: "Information")
+let card1 = Card(id: 3, balance: 5634.08, currency: "EUD", reissueInfo: reissueInfo)
 
-let card2 = Card(id:456, balance:806.04, currency: "RUR")
+let card2 = Card(id:4, balance: 34.04, currency: "RUR")
 
 let cards = [card1, card2]
 
