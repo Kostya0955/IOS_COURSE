@@ -10,32 +10,39 @@ enum Currency: String {
     case EUD = "EUD"
     
 }
-
-class Account : Print_Protocol {
+class Information {
+    
     var id: Int
     var balance: Double
     var currency: Currency?
+    
+    init(id: Int, balance: Double, currency: String) {
+        self.id=id
+        self.balance = balance
+        self.currency = Currency ( rawValue: currency)
+    }
+}
+class Account : Information, Print_Protocol {
+   
     var  description: String
     var offer: String?
     
     init(id: Int, balance: Double, currency: String, description: String, offer: String? = nil) {
-        self.id = id
-        self.balance = balance
-        self.currency = Currency(rawValue: currency)
+        
+       
         self.description = description
         self.offer = offer
+        super.init(id: id, balance: balance, currency: currency)
     }
+   
     func printInfo(){
-        print("User account \nuser id: \(id) \nbalance: \(balance) \ncurrency: \(currency?.rawValue ?? "no currency" ) \noffer: \(offer ?? "no offers")")
+        print("Account \nid:  \(id) \nbalance: \(balance) \ncurrency: \(currency?.rawValue ?? "no currency" ) \noffer: \(offer ?? "no offers")")
     }
 }
 
 func FromStringToDate(StringDate: String) -> Date? {
     let dateFormater = DateFormatter()
-    dateFormater.dateStyle = .medium
-    dateFormater.locale = Locale(identifier: "ru_RU")
     dateFormater.dateFormat = "dd MMMM yyyy"
-    dateFormater.timeZone = TimeZone(secondsFromGMT: 0)
     return dateFormater.date(from: StringDate)
     
 }
@@ -53,29 +60,25 @@ class ReissueInfo: Print_Protocol{
     
     func printInfo() {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd --- MM --- yyyy"
-        let strDateYeag = dateFormatter.string(from: date! )
-        print("Reissue Information \ndate: \(strDateYeag) \ninfo: \(info) \naddress: \(address)")
+        dateFormatter.dateFormat = "dd --- mm --- yyyy"
+        let strDate = dateFormatter.string(from: date! )
+        print("Reissue Information \ndate: \(strDate) \ninfo: \(info) \naddress: \(address)")
     }
 }
 
 
 
-class Card: Print_Protocol {
+class Card: Information, Print_Protocol {
     var reissueInfo: ReissueInfo?
-    var id: Int
-    var balance: Double
-    var currency: Currency?
+  
     
     init(id: Int, balance: Double, currency: String, reissueInfo: ReissueInfo? = nil ){
-        self.id = id
-        self.balance = balance
-        self.currency = Currency(rawValue: currency)
+        super.init(id: id, balance: balance, currency: currency)
         self.reissueInfo = reissueInfo
     }
     
     func printInfo() {
-        print("Card \ncard id: \(id) \nbalance: \(balance) \ncurrency: \(currency?.rawValue ?? "no currency")")
+        print("Card \nid: \(id) \nbalance: \(balance) \nreissue: \(reissueInfo?.address ?? "no reissue") \ncurrency: \(currency?.rawValue ?? "no currency")")
     }
 }
 
@@ -92,16 +95,16 @@ class ServerResponce: Print_Protocol {
     }
 }
 
-let ac1 = Account(id: 1, balance: 194.2, currency: "RUR", description: "First user", offer: "good")
+let ac1 = Account(id: 1, balance: 1946.2, currency: "RUR", description: "First user", offer: "this is offer")
 
-let ac2 = Account(id: 2, balance: 23.23, currency: "USD", description: "Second user")
+let ac2 = Account(id: 2, balance: 237.23, currency: "USD", description: "Second user")
 
 let accs:[Account] = [ac1, ac2]
 
 let reissueInfo = ReissueInfo(strDate: "16 cенятбря 2018", information: "Information")
-let card1 = Card(id: 3, balance: 5634.08, currency: "EUD", reissueInfo: reissueInfo)
+let card1 = Card(id: 3, balance: 56734.08, currency: "EUD", reissueInfo: reissueInfo)
 
-let card2 = Card(id:4, balance: 34.04, currency: "RUR")
+let card2 = Card(id:4, balance: 346.04, currency: "RUR")
 
 let cards:[Card] = [card1, card2]
 
