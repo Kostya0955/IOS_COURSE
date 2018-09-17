@@ -96,22 +96,22 @@ let ac1 = Account(id: 1, balance: 194.2, currency: "RUR", description: "First us
 
 let ac2 = Account(id: 2, balance: 23.23, currency: "USD", description: "Second user")
 
-let accs = [ac1, ac2]
+let accs:[Account] = [ac1, ac2]
 
 let reissueInfo = ReissueInfo(strDate: "16 cенятбря 2018", information: "Information")
 let card1 = Card(id: 3, balance: 5634.08, currency: "EUD", reissueInfo: reissueInfo)
 
 let card2 = Card(id:4, balance: 34.04, currency: "RUR")
 
-let cards = [card1, card2]
+let cards:[Card] = [card1, card2]
 
 let response = ServerResponce(cardArray: cards, accountArray: accs)
 
 var array = [Print_Protocol]()
 
-array.append(contentsOf: cards)
+array.append(contentsOf: cards as? [Print_Protocol] ?? [])
 
-array.append(contentsOf: accs)
+array.append(contentsOf: accs as? [Print_Protocol] ?? [])
 
 array.append(response)
 
