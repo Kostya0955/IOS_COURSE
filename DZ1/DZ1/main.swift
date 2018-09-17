@@ -26,7 +26,7 @@ class Account : Print_Protocol {
         self.offer = offer
     }
     func printInfo(){
-        print("User account \nuser id: \(id) \nbalance: \(balance) \ncurrency: \(currency?.rawValue ?? "incorrect currency" ) \noffer: \(offer ?? "offers don't exist")")
+        print("User account \nuser id: \(id) \nbalance: \(balance) \ncurrency: \(currency?.rawValue ?? "no currency" ) \noffer: \(offer ?? "no offers")")
     }
 }
 
@@ -55,7 +55,7 @@ class ReissueInfo: Print_Protocol{
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd --- MM --- yyyy"
         let strDateYeag = dateFormatter.string(from: date! )
-        print("Reissue Info \ndate: \(strDateYeag) \ninfo: \(info) \naddress: \(address)")
+        print("Reissue Information \ndate: \(strDateYeag) \ninfo: \(info) \naddress: \(address)")
     }
 }
 
@@ -75,7 +75,7 @@ class Card: Print_Protocol {
     }
     
     func printInfo() {
-        print("Card \ncard id: \(id) \nbalance: \(balance) \ncurrency: \(currency?.rawValue ?? "incorrect currency")")
+        print("Card \ncard id: \(id) \nbalance: \(balance) \ncurrency: \(currency?.rawValue ?? "no currency")")
     }
 }
 
