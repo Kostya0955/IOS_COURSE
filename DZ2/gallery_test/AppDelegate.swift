@@ -1,9 +1,8 @@
 //
 //  AppDelegate.swift
-//  gallery_test
-//
-//  Created by Konstantin on 23.09.2018.
-//  Copyright © 2018 Konstantin. All rights reserved.
+//   gallery_test
+//  Created by Головнёв Константин on 17.10.2018.
+//  Copyright © 2018 Головнёв Константин. All rights reserved.
 //
 
 import UIKit
