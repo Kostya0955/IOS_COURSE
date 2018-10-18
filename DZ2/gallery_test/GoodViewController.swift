@@ -17,18 +17,23 @@ final class GoodViewController: UIViewController {
     @IBOutlet weak var btnClick: UIButton!
     var good: Good!
     
+    @IBOutlet weak var Review: UILabel!
+    
+    @IBOutlet var VColor: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         self.applyRoundCorner(btnClick)
+      //  VColor.backgroundColor = UIColor.white
     }
 
     func setupUI() {
+        
         ImageV.image = good.image
         NameLabel.text = good.name.uppercased()
-        DeskrLAbel.text = good.company.uppercased()
-       
-        
+        DeskrLAbel.text = good.company
+        Review.text = "Просмотров: \(good.views)"
 
         let gesture = UITapGestureRecognizer(target: self, action: #selector(openInFullScreen))
         ImageV.addGestureRecognizer(gesture)

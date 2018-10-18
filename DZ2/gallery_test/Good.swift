@@ -12,13 +12,13 @@ final class Good {
     var image: UIImage
     var name: String
     var company: String
-    var price: Double
+    var views: Double
     
-    init(id: Int, image: UIImage, name: String, company: String, price: Double) {
+    init(id: Int, image: UIImage, name: String, company: String, views: Double) {
         self.id = id
         self.image = image
         self.name = name
         self.company = company
-        self.price = price
+        self.views = views
     }
 }

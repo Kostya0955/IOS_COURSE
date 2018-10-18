@@ -44,6 +44,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func configureTableView() {
+        tableView.backgroundColor = UIColor.red
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView()

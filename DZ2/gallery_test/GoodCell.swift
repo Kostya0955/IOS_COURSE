@@ -17,8 +17,7 @@ final class GoodCell: UITableViewCell {
     @IBOutlet weak var goodImage: UIImageView!
     @IBOutlet weak var goodName: UILabel!
     @IBOutlet weak var companyName: UILabel!
-    @IBOutlet weak var price: UILabel!
-    @IBOutlet weak var addToCartButton: UIButton!
+ 
     
     weak var delegate: GoodCellDelegate?
     
@@ -26,7 +25,7 @@ final class GoodCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        goodImage.backgroundColor = UIColor.yellow
+        goodImage.backgroundColor = UIColor.white
         companyName.textColor = UIColor.brown
     }
     
@@ -42,10 +41,7 @@ final class GoodCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    @IBAction func addToCart(_ sender: UIButton) {
-        guard let good = good else { return }
-        delegate?.addToCartTapped(good: good)
-    }
+   
     
 }
 
