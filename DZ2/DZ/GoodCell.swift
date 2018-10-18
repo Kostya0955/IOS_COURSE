@@ -9,31 +9,32 @@
 import UIKit
 
 protocol GoodCellDelegate: class {
-    func addToCartTapped(good: Good)
+    func addToCartTapped(video: Video)
 }
 
 final class GoodCell: UITableViewCell {
     
-    @IBOutlet weak var goodImage: UIImageView!
-    @IBOutlet weak var goodName: UILabel!
-    @IBOutlet weak var companyName: UILabel!
+    @IBOutlet weak var PreviewImage: UIImageView!
+    @IBOutlet weak var VideoName: UILabel!
+   
  
+    @IBOutlet weak var DescrName: UILabel!
     
     weak var delegate: GoodCellDelegate?
     
-    private var good: Good?
+    private var video: Video?
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        goodImage.backgroundColor = UIColor.white
-        companyName.textColor = UIColor.brown
+        PreviewImage.backgroundColor = UIColor.white
+        DescrName.textColor = UIColor.brown
     }
     
-    func configureView(good: Good) {
-        self.good = good
-        goodImage.image = good.image
-        goodName.text = good.name
-        companyName.text = good.company
+    func configureView(video: Video) {
+        self.video = video
+        PreviewImage.image = video.image
+        VideoName.text = video.name
+        DescrName.text = video.descr
         
     }
     

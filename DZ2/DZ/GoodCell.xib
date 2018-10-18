@@ -27,15 +27,15 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rib-bc-H6w" userLabel="Container">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="135.5"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img1" translatesAutoresizingMaskIntoConstraints="NO" id="4bL-II-4TK">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img7" translatesAutoresizingMaskIntoConstraints="NO" id="4bL-II-4TK" userLabel="Preview">
                                 <rect key="frame" x="16" y="12" width="166" height="112"/>
-                                <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="112" id="7aB-nO-pb3"/>
                                     <constraint firstAttribute="width" constant="166" id="vW8-3e-sVa"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rus-4r-asm">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rus-4r-asm" userLabel="Video Name">
                                 <rect key="frame" x="190" y="12" width="177" height="36"/>
                                 <string key="text">France Authentic 
 Jersey 2018</string>
@@ -43,7 +43,7 @@ Jersey 2018</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="NIKE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Tp-gb-SxE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="NIKE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Tp-gb-SxE" userLabel="Descr Name">
                                 <rect key="frame" x="190" y="69" width="177" height="55"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -75,14 +75,14 @@ Jersey 2018</string>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="companyName" destination="8Tp-gb-SxE" id="o0X-pY-f4c"/>
-                <outlet property="goodImage" destination="4bL-II-4TK" id="oPZ-6h-CRO"/>
-                <outlet property="goodName" destination="rus-4r-asm" id="QE2-Zi-QAM"/>
+                <outlet property="DescrName" destination="8Tp-gb-SxE" id="T7w-Ul-t52"/>
+                <outlet property="PreviewImage" destination="4bL-II-4TK" id="Eli-ou-na3"/>
+                <outlet property="VideoName" destination="rus-4r-asm" id="HeL-E4-ZHd"/>
             </connections>
             <point key="canvasLocation" x="61.5" y="8"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="img1" width="198" height="288"/>
+        <image name="img7" width="472" height="270"/>
     </resources>
 </document>

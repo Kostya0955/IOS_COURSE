@@ -15,7 +15,7 @@ final class GoodViewController: UIViewController {
     @IBOutlet weak var ImageV: UIImageView!
     
     @IBOutlet weak var btnClick: UIButton!
-    var good: Good!
+    var video: Video!
     
     @IBOutlet weak var Review: UILabel!
     
@@ -30,10 +30,10 @@ final class GoodViewController: UIViewController {
 
     func setupUI() {
         
-        ImageV.image = good.image
-        NameLabel.text = good.name.uppercased()
-        DeskrLAbel.text = good.company
-        Review.text = "Просмотров: \(good.views)"
+        ImageV.image = video.image
+        NameLabel.text = video.name.uppercased()
+        DeskrLAbel.text = video.descr
+        Review.text = "Просмотров: \(video.views)"
 
         let gesture = UITapGestureRecognizer(target: self, action: #selector(openInFullScreen))
         ImageV.addGestureRecognizer(gesture)
@@ -43,7 +43,7 @@ final class GoodViewController: UIViewController {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         guard let vc = storyBoard.instantiateViewController(withIdentifier: "FullScreenImageViewController") as? FullScreenImageViewController else { return }
     
-        vc.good = good
+        vc.video = video
         present(vc, animated: true, completion: nil)
     }
     func applyRoundCorner(_ object: AnyObject){

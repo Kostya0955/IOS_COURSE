@@ -64,7 +64,7 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Mke-vM-VhH">
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Settings"/>
                                 <connections>
                                     <action selector="nextViewClickedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2YO-Sh-skK"/>
                                 </connections>
@@ -192,9 +192,8 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hoO-bo-sfM">
-                                <rect key="frame" x="286" y="391" width="69" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hoO-bo-sfM">
+                                <rect key="frame" x="316" y="391" width="30" height="30"/>
                                 <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Size">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -211,7 +210,9 @@
                             <constraint firstItem="JgD-qe-zOP" firstAttribute="top" secondItem="suG-9E-Ynf" secondAttribute="bottom" constant="109" id="Lzx-Kd-RWO"/>
                             <constraint firstItem="Aob-cg-iZE" firstAttribute="trailing" secondItem="suG-9E-Ynf" secondAttribute="trailing" constant="20" id="Phu-41-jsJ"/>
                             <constraint firstItem="suG-9E-Ynf" firstAttribute="top" secondItem="tV4-rm-hB1" secondAttribute="bottom" constant="37" id="bdV-ER-sGs"/>
+                            <constraint firstItem="hoO-bo-sfM" firstAttribute="top" secondItem="suG-9E-Ynf" secondAttribute="bottom" constant="31" id="itC-mb-XGb"/>
                             <constraint firstItem="suG-9E-Ynf" firstAttribute="top" secondItem="Aob-cg-iZE" secondAttribute="top" constant="78" id="jKV-Wh-nuR"/>
+                            <constraint firstItem="Aob-cg-iZE" firstAttribute="trailing" secondItem="hoO-bo-sfM" secondAttribute="trailing" constant="29" id="ujx-Tf-koq"/>
                             <constraint firstItem="JgD-qe-zOP" firstAttribute="leading" secondItem="Aob-cg-iZE" secondAttribute="leading" constant="16" id="vZf-vZ-scX"/>
                             <constraint firstItem="tV4-rm-hB1" firstAttribute="centerX" secondItem="0VH-li-cXa" secondAttribute="centerX" id="vk5-xC-sZR"/>
                             <constraint firstItem="tV4-rm-hB1" firstAttribute="top" secondItem="Aob-cg-iZE" secondAttribute="top" constant="20" id="xTV-Kb-4BC"/>
@@ -220,7 +221,7 @@
                     </view>
                     <value key="contentSizeForViewInPopover" type="size" width="375" height="1000"/>
                     <connections>
-                        <outlet property="DeskrLAbel" destination="TR7-SZ-Y6t" id="N0o-Bh-uKn"/>
+                        <outlet property="DeskrLAbel" destination="TR7-SZ-Y6t" id="IVR-EQ-tvy"/>
                         <outlet property="ImageV" destination="suG-9E-Ynf" id="IOh-Ge-qda"/>
                         <outlet property="NameLabel" destination="tV4-rm-hB1" id="UJe-f9-8TD"/>
                         <outlet property="Review" destination="uZJ-bL-wAS" id="iok-ac-GDF"/>
@@ -240,7 +241,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img1" translatesAutoresizingMaskIntoConstraints="NO" id="szk-NO-giS">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img 11-1" translatesAutoresizingMaskIntoConstraints="NO" id="szk-NO-giS">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
                         </subviews>
@@ -281,6 +282,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="img1" width="198" height="288"/>
+        <image name="img 11-1" width="624" height="326"/>
     </resources>
 </document>

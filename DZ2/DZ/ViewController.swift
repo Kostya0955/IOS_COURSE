@@ -56,14 +56,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // количество строк в секции
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return model.goods.count
+        return model.videos.count
     }
     
     // создание ячейки в строке
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if((indexPath.row)%3 != 0){
              let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! GoodCell
-            cell.configureView(good: model.goods[indexPath.row])
+            cell.configureView(video: model.videos[indexPath.row])
             return cell
         }else {
             let cell = tableView.dequeueReusableCell(withIdentifier: cellId2, for: indexPath)
@@ -76,8 +76,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
          if((indexPath.row)%3 != 0){
-        let good = model.goods[indexPath.row]
-        performSegue(withIdentifier: segueName, sender: good)
+        let video = model.videos[indexPath.row]
+        performSegue(withIdentifier: segueName, sender: video)
         }
     }
     
@@ -85,9 +85,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if segue.identifier == segueName {
             guard
                 let vc = segue.destination as? GoodViewController,
-                let good = sender as? Good
+                let video = sender as? Video
                 else { return }
-            vc.good = good
+            vc.video = video
         }
     }
     
