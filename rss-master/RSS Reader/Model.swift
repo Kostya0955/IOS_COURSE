@@ -2,8 +2,8 @@
 //  Model.swift
 //  RSS Reader
 //
-//  Created by Константин Головнев on 11/12/2018.
-//  Copyright © 2018 Константин Головнев. All rights reserved.
+//  Created by Ануфриев Артем on 11/12/2018.
+//  Copyright © 2018 Ануфриев Артем. All rights reserved.
 //
 
 import UIKit
