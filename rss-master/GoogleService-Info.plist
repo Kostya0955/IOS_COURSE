@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>272773748017-fmfc84j93nah0439to7qtpm5f065maer.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.272773748017-fmfc84j93nah0439to7qtpm5f065maer</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC6agm9hqrA3WNMPyZoFlh_eq8YuWLC5qo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>272773748017</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>anufriev.RSS-Reader</string>
+	<key>PROJECT_ID</key>
+	<string>newsreader-cd45c</string>
+	<key>STORAGE_BUCKET</key>
+	<string>newsreader-cd45c.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:272773748017:ios:627b49aab9357a90</string>
+	<key>DATABASE_URL</key>
+	<string>https://newsreader-cd45c.firebaseio.com</string>
+</dict>
+</plist>
